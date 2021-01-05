@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamaño6_4sp">24sp</dimen>
+    <dimen name="dimen_5_4">20dp</dimen>
+    <dimen name="dimen_5_8">40dp</dimen>
+    <dimen name="dimen_5_1">5dp</dimen>
+</resources>

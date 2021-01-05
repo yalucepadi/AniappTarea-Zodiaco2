@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ZodiacoNV</string>
+    <string name="titulo">Nuevo zodiaco</string>
+    <string name="seleccione_fecha_de_nacimiento">Seleccione su fecha de nacimiento</string>
+    <string name="refrescar">Refrescar</string>
+    <string name="compartir_gf_txt">Compartir imagen</string>
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/tamaño6_4sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+
+    <EditText
+        android:id="@+id/etPlannedDate"
+        android:hint="@string/seleccione_fecha_de_nacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="datetime"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/tvSigno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPlannedDate" />
+
+
+    <ImageView
+        android:id="@+id/imageViewZodiaco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSigno"
+        app:srcCompat="@android:color/transparent"
+        tools:srcCompat="@android:color/transparent" />
+
+
+    <Button
+        android:id="@+id/outlinedButtonRefrescar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refrescar"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_marginTop="@dimen/dimen_5_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewZodiaco" />
+
+    <ImageView
+        android:id="@+id/imageViewFacebook"
+        android:layout_width="@dimen/dimen_5_8"
+        android:layout_height="@dimen/dimen_5_8"
+        android:layout_marginTop="@dimen/dimen_5_8"
+        android:layout_marginEnd="@dimen/dimen_5_4"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewInstagram"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outlinedButtonRefrescar" />
+
+    <ImageView
+        android:id="@+id/imageViewInstagram"
+        android:layout_width="@dimen/dimen_5_8"
+        android:layout_height="@dimen/dimen_5_8"
+        android:layout_marginEnd="@dimen/dimen_5_4"
+        android:src="@drawable/ic_instagram"
+
+        app:layout_constraintEnd_toStartOf="@+id/cardViewWhatsapp"
+
+
+        app:layout_constraintStart_toEndOf="@+id/imageViewFacebook"
+        app:layout_constraintTop_toTopOf="@id/imageViewFacebook" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewWhatsapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen_5_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewInstagram"
+        app:layout_constraintTop_toTopOf="@id/imageViewFacebook"
+        app:strokeColor="@color/gris_light">
+
+        <ImageView
+            android:id="@+id/imageViewGoogle"
+            android:layout_width="@dimen/dimen_5_8"
+            android:layout_height="@dimen/dimen_5_8"
+            android:padding="@dimen/dimen_5_1"
+            android:src="@drawable/ic_whatsapp"
+
+
+            />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvPrediccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/dimen_5_1"
+        app:layout_constraintTop_toBottomOf="@id/imageViewFacebook"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
